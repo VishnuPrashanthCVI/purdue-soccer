@@ -1,5 +1,5 @@
 # purdue-soccer
-Data Analysis on soccer data to improve player performance
+Data Analysis to improve Purdue's women's soccer team performance.
 
 ## Fall 2016 Season Analysis - Individual Practice Workload Averages
 
