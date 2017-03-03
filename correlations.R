@@ -78,3 +78,15 @@ ggcorr(forwards3)
 
 forwards3
 
+library(reshape2)
+forwards3 <- forwards %>%
+  select(Distance.Total:Decelerations)
+melted_forwards <- melt(forwards3)
+
+cormat <- round(cor(forwards3),2)
+cormat
+melted_cormat <- melt(cormat)
+
+ggplot(melted_cormat, aes(Var1, Var2, fill = value))+
+  geom_tile() + 
+  theme_fivethirtyeight()

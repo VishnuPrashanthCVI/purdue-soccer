@@ -149,6 +149,18 @@ ggplot(forwards, aes())
 
 
 
+ggplot(positionsPracticeDays, aes(Session.Type, Distance.Total, color = blue)) +
+  geom_line(aes(group = Player.Position), size = 1.5, color = yellow) +
+  facet_wrap(~Player.Position) + 
+  theme_fivethirtyeight() +
+  ggtitle("Mean Distance total for each position - practice")
+
+
+levels(full$Player.Name)
+players <- full %>%
+  unique(Player.Name)
+
+
 
 
 
